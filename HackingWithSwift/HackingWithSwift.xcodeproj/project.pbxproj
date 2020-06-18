@@ -18,6 +18,7 @@
 		519AE17121947AB5001F5CFF /* projects.json in Resources */ = {isa = PBXBuildFile; fileRef = 519AE17021947AB5001F5CFF /* projects.json */; };
 		519AE17321948C5A001F5CFF /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AE17221948C5A001F5CFF /* ReadViewController.swift */; };
 		BC75F889249BD47C00B73A4A /* Bundle+Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC75F888249BD47C00B73A4A /* Bundle+Decoding.swift */; };
+		BC75F88C249BF23800B73A4A /* ProjectDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC75F88B249BF23800B73A4A /* ProjectDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		519AE17021947AB5001F5CFF /* projects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = projects.json; sourceTree = "<group>"; };
 		519AE17221948C5A001F5CFF /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		BC75F888249BD47C00B73A4A /* Bundle+Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Decoding.swift"; sourceTree = "<group>"; };
+		BC75F88B249BF23800B73A4A /* ProjectDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		519AE14B2194787D001F5CFF /* HackingWithSwift */ = {
 			isa = PBXGroup;
 			children = (
+				BC75F88A249BF20D00B73A4A /* DataSources */,
 				BC75F887249BD33500B73A4A /* Extensions */,
 				BC75F886249BD31F00B73A4A /* ViewControllers */,
 				519AE14C2194787D001F5CFF /* AppDelegate.swift */,
@@ -125,6 +128,14 @@
 				BC75F888249BD47C00B73A4A /* Bundle+Decoding.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BC75F88A249BF20D00B73A4A /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				BC75F88B249BF23800B73A4A /* ProjectDataSource.swift */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC75F88C249BF23800B73A4A /* ProjectDataSource.swift in Sources */,
 				519AE16D21947911001F5CFF /* DetailViewController.swift in Sources */,
 				519AE14F2194787D001F5CFF /* ViewController.swift in Sources */,
 				BC75F889249BD47C00B73A4A /* Bundle+Decoding.swift in Sources */,
