@@ -17,6 +17,7 @@
 		519AE16F219479E3001F5CFF /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AE16E219479E3001F5CFF /* Project.swift */; };
 		519AE17121947AB5001F5CFF /* projects.json in Resources */ = {isa = PBXBuildFile; fileRef = 519AE17021947AB5001F5CFF /* projects.json */; };
 		519AE17321948C5A001F5CFF /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AE17221948C5A001F5CFF /* ReadViewController.swift */; };
+		BC75F889249BD47C00B73A4A /* Bundle+Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC75F888249BD47C00B73A4A /* Bundle+Decoding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		519AE16E219479E3001F5CFF /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		519AE17021947AB5001F5CFF /* projects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = projects.json; sourceTree = "<group>"; };
 		519AE17221948C5A001F5CFF /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
+		BC75F888249BD47C00B73A4A /* Bundle+Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Decoding.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +87,9 @@
 		519AE14B2194787D001F5CFF /* HackingWithSwift */ = {
 			isa = PBXGroup;
 			children = (
+				BC75F887249BD33500B73A4A /* Extensions */,
+				BC75F886249BD31F00B73A4A /* ViewControllers */,
 				519AE14C2194787D001F5CFF /* AppDelegate.swift */,
-				519AE14E2194787D001F5CFF /* ViewController.swift */,
-				519AE16C21947911001F5CFF /* DetailViewController.swift */,
-				519AE17221948C5A001F5CFF /* ReadViewController.swift */,
 				519AE16E219479E3001F5CFF /* Project.swift */,
 				519AE1502194787D001F5CFF /* Main.storyboard */,
 				519AE1532194787E001F5CFF /* Assets.xcassets */,
@@ -106,6 +107,24 @@
 				519AE1632194787E001F5CFF /* Info.plist */,
 			);
 			path = HackingWithSwiftTests;
+			sourceTree = "<group>";
+		};
+		BC75F886249BD31F00B73A4A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				519AE14E2194787D001F5CFF /* ViewController.swift */,
+				519AE16C21947911001F5CFF /* DetailViewController.swift */,
+				519AE17221948C5A001F5CFF /* ReadViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BC75F887249BD33500B73A4A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC75F888249BD47C00B73A4A /* Bundle+Decoding.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +231,7 @@
 			files = (
 				519AE16D21947911001F5CFF /* DetailViewController.swift in Sources */,
 				519AE14F2194787D001F5CFF /* ViewController.swift in Sources */,
+				BC75F889249BD47C00B73A4A /* Bundle+Decoding.swift in Sources */,
 				519AE14D2194787D001F5CFF /* AppDelegate.swift in Sources */,
 				519AE16F219479E3001F5CFF /* Project.swift in Sources */,
 				519AE17321948C5A001F5CFF /* ReadViewController.swift in Sources */,
