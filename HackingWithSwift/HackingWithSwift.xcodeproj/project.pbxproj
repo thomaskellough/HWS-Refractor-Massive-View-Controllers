@@ -20,6 +20,8 @@
 		BC75F889249BD47C00B73A4A /* Bundle+Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC75F888249BD47C00B73A4A /* Bundle+Decoding.swift */; };
 		BC75F88C249BF23800B73A4A /* ProjectDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC75F88B249BF23800B73A4A /* ProjectDataSource.swift */; };
 		BC75F88F249BF46E00B73A4A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC75F88E249BF46E00B73A4A /* DetailView.swift */; };
+		BC75F892249C18AF00B73A4A /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC75F891249C18AF00B73A4A /* NavigationDelegate.swift */; };
+		BC75F894249C199100B73A4A /* WebView+LoadString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC75F893249C199100B73A4A /* WebView+LoadString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		BC75F888249BD47C00B73A4A /* Bundle+Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Decoding.swift"; sourceTree = "<group>"; };
 		BC75F88B249BF23800B73A4A /* ProjectDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDataSource.swift; sourceTree = "<group>"; };
 		BC75F88E249BF46E00B73A4A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		BC75F891249C18AF00B73A4A /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
+		BC75F893249C199100B73A4A /* WebView+LoadString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebView+LoadString.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 		519AE14B2194787D001F5CFF /* HackingWithSwift */ = {
 			isa = PBXGroup;
 			children = (
+				BC75F890249C189700B73A4A /* Delgates */,
 				BC75F88D249BF45300B73A4A /* Views */,
 				BC75F88A249BF20D00B73A4A /* DataSources */,
 				BC75F887249BD33500B73A4A /* Extensions */,
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				BC75F888249BD47C00B73A4A /* Bundle+Decoding.swift */,
+				BC75F893249C199100B73A4A /* WebView+LoadString.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -147,6 +153,14 @@
 				BC75F88E249BF46E00B73A4A /* DetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BC75F890249C189700B73A4A /* Delgates */ = {
+			isa = PBXGroup;
+			children = (
+				BC75F891249C18AF00B73A4A /* NavigationDelegate.swift */,
+			);
+			path = Delgates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +269,8 @@
 				BC75F88F249BF46E00B73A4A /* DetailView.swift in Sources */,
 				519AE16D21947911001F5CFF /* DetailViewController.swift in Sources */,
 				519AE14F2194787D001F5CFF /* ViewController.swift in Sources */,
+				BC75F894249C199100B73A4A /* WebView+LoadString.swift in Sources */,
+				BC75F892249C18AF00B73A4A /* NavigationDelegate.swift in Sources */,
 				BC75F889249BD47C00B73A4A /* Bundle+Decoding.swift in Sources */,
 				519AE14D2194787D001F5CFF /* AppDelegate.swift in Sources */,
 				519AE16F219479E3001F5CFF /* Project.swift in Sources */,
@@ -421,7 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B5C26XE59E;
+				DEVELOPMENT_TEAM = GMC4Z3BP4Y;
 				INFOPLIST_FILE = HackingWithSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -439,7 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B5C26XE59E;
+				DEVELOPMENT_TEAM = GMC4Z3BP4Y;
 				INFOPLIST_FILE = HackingWithSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
