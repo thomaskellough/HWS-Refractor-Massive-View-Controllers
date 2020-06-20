@@ -9,14 +9,14 @@
 import UIKit
 import WebKit
 
-class ReadViewController: UIViewController {
+class ReadViewController: UIViewController, Storyboarded {
     var webView = WKWebView()
     var navigationDelegate = NavigationDelegate()
     var project: Project!
 
     override func loadView() {
         webView.navigationDelegate = navigationDelegate
-
+        
         view = webView
     }
 
