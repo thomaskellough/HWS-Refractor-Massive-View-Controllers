@@ -30,5 +30,16 @@ class HackingWithSwiftTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testNavigationDelegateAllowsGoodSite() {
+        let sut = NavigationDelegate()
+        let url = URL(string: "https://www.hackingwithswift.com")
+        XCTAssertTrue(sut.isAllowed(url: url))
+    }
 
+    func testNavigationDelegateAllowsBadSite() {
+        let sut = NavigationDelegate()
+        let url = URL(string: "https://www.google.com")
+        XCTAssertFalse(sut.isAllowed(url: url))
+    }
 }

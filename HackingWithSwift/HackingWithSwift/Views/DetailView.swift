@@ -1,38 +1,44 @@
 //
-//  DetailViewController.swift
+//  DetailView.swift
 //  HackingWithSwift
 //
-//  Created by Paul Hudson on 08/11/2018.
-//  Copyright © 2018 Hacking with Swift. All rights reserved.
+//  Created by Thomas Kellough on 6/18/20.
+//  Copyright © 2020 Hacking with Swift. All rights reserved.
 //
 
 import UIKit
 
-class DetailViewController: UIViewController {
-    var project: Project!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        assert(project != nil, "You must set a project before show this view controller.")
-
-        navigationItem.largeTitleDisplayMode = .never
-        title = "Project \(project.number)"
-
+class DetailView: UIView {
+    
+    var readAction: (() -> Void)?
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) is not supported.")
+    }
+    
+    init(project: Project, readAction: @escaping() -> Void) {
+        self.readAction = readAction
+        super.init(frame: .zero)
+        if #available(iOS 13.0, *) {
+            backgroundColor = .systemBackground
+        } else {
+            backgroundColor = .white
+        }
+        
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
+        addSubview(scrollView)
 
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         scrollView.addSubview(stackView)
-
+        
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            scrollView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
 
             stackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 20),
             stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 20),
@@ -79,13 +85,9 @@ class DetailViewController: UIViewController {
         stackView.setCustomSpacing(40, after: detailLabel)
         stackView.setCustomSpacing(40, after: learnDetailLabel)
     }
-
+    
     @objc func readProject() {
-        guard let readVC = storyboard?.instantiateViewController(withIdentifier: "ReadViewController") as? ReadViewController else {
-            return
-        }
-
-        readVC.project = project
-        navigationController?.pushViewController(readVC, animated: true)
+        readAction?()
     }
+
 }
